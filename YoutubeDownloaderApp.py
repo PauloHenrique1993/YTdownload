@@ -43,8 +43,10 @@ class YouTubeDownloaderApp:
             return
 
         opcoes = {
-            'format': 'bestaudio/best',
+            'format': '140/bestaudio/best',
             'outtmpl': os.path.join(pasta, '%(title)s.%(ext)s'),
+            'noplaylist': True,
+            'geo_bypass': True,
             'postprocessors': [
                 {
                     'key': 'FFmpegExtractAudio',
